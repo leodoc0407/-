@@ -1,0 +1,37 @@
+{
+	"schemaVersion": 1,
+	"id": "plastfps-pvp",
+	"version": "${version}",
+	"name": "plastfps pvp",
+	"description": "This is an example description! Tell everyone what your mod is about!",
+	"authors": [
+		"Me!"
+	],
+	"contact": {
+		"homepage": "https://fabricmc.net/",
+		"sources": "https://github.com/FabricMC/fabric-example-mod"
+	},
+	"license": "CC0-1.0",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"plastfps.bust.PlastfpsPvp"
+		],
+		"client": [
+			"plastfps.bust.client.PlastfpsPvpClient"
+		]
+	},
+	"mixins": [
+		"plastfps-pvp.mixins.json",
+		{
+			"config": "plastfps-pvp.client.mixins.json",
+			"environment": "client"
+		}
+	],
+	"depends": {
+		"fabricloader": ">=0.19.2",
+		"minecraft": "~1.21.4",
+		"java": ">=21",
+		"fabric-api": "*"
+	}
+}
